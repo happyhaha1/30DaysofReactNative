@@ -16,9 +16,7 @@ import React, {
 
 class CustomFont extends Component {
   
-  
-
-  render() {
+    render() {
     return (
         <NavigatorIOS
             style={{flex:1}}
