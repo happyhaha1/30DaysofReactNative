@@ -12,14 +12,18 @@ import React, {
   NavigatorIOS,
   ListView,
   ScrollView,
-  Image
+  Image,
+  TouchableHighlight
 } from 'react-native';
+import VideoView from './VideoView'
+
 class PlayLocalVideo extends Component {
   render() {
     return (
         <NavigatorIOS
                 style={{flex:1}}
                 translucent={true} 
+                tintColor={'white'}
                 barTintColor={"#000000"}
                 titleTextColor={"white"}
                 initialRoute={{
@@ -64,26 +68,36 @@ class List extends Component {
     }
     
     
-    renderView(vodio){
+    renderView(video){
         
         return(
-            <View style={[styles.vodioView]}>
+            <View style={[styles.videoView]}>
                 <Image
                      style={[styles.iamge]}
-                     source={vodio.image}>
-                     <Image source={require('image!playBtn')} style={{flex:10,resizeMode: 'contain'}}/>
+                     source={video.image}>
+                     <TouchableHighlight style={{flex:10,justifyContent: 'center',alignItems: 'center',height:30}} underlayColor='transparent'onPress={this._playVideo.bind(this,video)}>
+                        <Image source={require('image!playBtn')} style={{resizeMode: 'contain'}}/>
+                     </TouchableHighlight>
                      <View style={[styles.textView]}>
-                        <Text style={[styles.voidoTitle]}>{vodio.title}</Text>
-                        <Text style={[styles.voidoSource]}>{vodio.source}</Text>
+                        <Text style={[styles.voidoTitle]}>{video.title}</Text>
+                        <Text style={[styles.voidoSource]}>{video.source}</Text>
                     </View>
                 </Image>
-                
-                
             </View>
         );
     }
+    
+    _playVideo(video){
+        this.props.navigator.push({
+            title: video.title,
+            component: VideoView,
+            passProps: {
+                video: video,
+                navigator: this.props.navigator
+            }
+        });
+    }
 }
-
 var data = [
         {image: require('image!videoScreenshot01'), title: "Introduce 3DS Mario", source: "Youtube - 06:32"},
         {image: require('image!videoScreenshot02'), title: "Emoji Among Us", source: "Vimeo - 3:34"},
@@ -97,7 +111,7 @@ const styles = StyleSheet.create({
     listView: {
         
     },
-    vodioView: {
+    videoView: {
         height: 200,
         justifyContent: 'center',
         alignItems: 'center',
