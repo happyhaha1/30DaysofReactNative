@@ -20,6 +20,7 @@ class CustomFont extends Component {
     return (
         <NavigatorIOS
             style={{flex:1}}
+            translucent={true} 
             barTintColor={"#000000"}
             titleTextColor={"white"}
             initialRoute={{
