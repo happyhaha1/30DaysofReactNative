@@ -15377,8 +15377,8 @@ flex:1},
 right:{
 flex:1},
 
-preview:{}});
-
+preview:{
+flex:1}});
 
 
 
@@ -62509,4 +62509,4 @@ module.exports=NavigationHeader;
 });
 ;require("InitializeJavaScriptAppEngine");
 ;require("Snapchat/index.ios.js");
-__SSTOKENSTRING = "@generated SignedSource<<644d91ddacb03b1e6f3506ae37b716c0>>";
+__SSTOKENSTRING = "@generated SignedSource<<fef16c7cabed2a5319145b932e537657>>";

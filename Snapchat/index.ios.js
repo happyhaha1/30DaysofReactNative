@@ -7,24 +7,34 @@ import React, {
   AppRegistry,
   Component,
   StyleSheet,
-  Text,
-  View
+  Image,
+  View,
+  StatusBarIOS,
+  Dimensions
 } from 'react-native';
 
 import Swiper from 'react-native-swiper';
-
+import Camera from 'react-native-camera';
+const {width,height} = Dimensions.get('window');
+StatusBarIOS.setHidden(1);
 class Snapchat extends Component {
   render() {
     return (
-      <Swiper style={styles.wrapper} showsButtons={true}>
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Hello Swiper</Text>
+      <Swiper style={styles.wrapper} showsButtons={false} showsPagination={false}>
+        <View style={styles.left}>
+          <Image style={{width,height,}} source={require('image!left')}/>
         </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
+        <View style={styles.main}>
+          <Camera
+            ref={(cam) => {
+                this.camera = cam;
+            }}
+            style={styles.preview}
+            aspect={Camera.constants.Aspect.fill}>
+        </Camera>
         </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
+        <View style={styles.right}>
+          <Image style={{width,height,}} source={require('image!right')}/>
         </View>
       </Swiper>
     );
@@ -34,28 +44,18 @@ class Snapchat extends Component {
 const styles = StyleSheet.create({
   wrapper: {
   },
-  slide1: {
+  left: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#9DD6EB',
+    
   },
-  slide2: {
+  main: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#97CAE5',
   },
-  slide3: {
+  right: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#92BBD9',
   },
-  text: {
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
+  preview: {
+      flex: 1,
   }
 });
 
