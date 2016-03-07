@@ -47,9 +47,12 @@ class FindMyLocation extends Component {
   _getLocation(){
       navigator.geolocation.getCurrentPosition(
       (position) => {
-        this.setState({position})
+         const location = JSON.stringify(position)
+         this.setState({location})
       },
-      (error) => alert('定位发生错误'),
+      (error) => this.setState({
+      	location: '定位发生错误'
+      }),
       {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
     )
   }
