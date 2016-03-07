@@ -48,6 +48,7 @@ class PullToRefresh extends Component {
                         refreshing={this.state.isRefreshing}
                         onRefresh={this._onRefresh.bind(this)}
                         tintColor='#ffffff'
+                        fontColor='#ffffff'
                         title={'Last Update at ' + new Date().toString()}
                         colors={['#ffffff', '#ffffff', '#ffffff']}
                         progressBackgroundColor='#ffffff'
