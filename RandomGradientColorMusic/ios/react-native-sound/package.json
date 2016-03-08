@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "react-native-sound",
+      "/Users/zhengkaixin/Desktop/react/30DaysofReactNative/RandomGradientColorMusic"
+    ]
+  ],
+  "_cnpm_publish_time": 1451451967954,
+  "_from": "react-native-sound@latest",
+  "_id": "react-native-sound@0.7.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-native-sound",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "email": "z@zmxv.com",
+    "name": "zmxv"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "react-native-sound",
+    "raw": "react-native-sound",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/react-native-sound/download/react-native-sound-0.7.3.tgz",
+  "_shasum": "cb668a7404e6ddf159fdd8a13914b821bbd564f7",
+  "_shrinkwrap": null,
+  "_spec": "react-native-sound",
+  "_where": "/Users/zhengkaixin/Desktop/react/30DaysofReactNative/RandomGradientColorMusic",
+  "author": {
+    "email": "z@zmxv.com",
+    "name": "Zhen Wang",
+    "url": "http://blog.zmxv.com"
+  },
+  "bugs": {
+    "url": "https://github.com/zmxv/react-native-sound/issues"
+  },
+  "dependencies": {},
+  "description": "React Native module for playing sound clips on iOS and Android",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "noattachment": false,
+    "shasum": "cb668a7404e6ddf159fdd8a13914b821bbd564f7",
+    "size": 14600411,
+    "tarball": "http://registry.npm.taobao.org/react-native-sound/download/react-native-sound-0.7.3.tgz"
+  },
+  "gitHead": "61bf0ab6a73a30412015d57f5f892d83eea7a9f8",
+  "homepage": "https://github.com/zmxv/react-native-sound#readme",
+  "keywords": [
+    "audio",
+    "react-component",
+    "react-native",
+    "sound"
+  ],
+  "license": "MIT",
+  "main": "sound.js",
+  "maintainers": [
+    {
+      "name": "zmxv",
+      "email": "z@zmxv.com"
+    }
+  ],
+  "name": "react-native-sound",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react-native": ">=0.8.0"
+  },
+  "publish_time": 1451451967954,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmxv/react-native-sound.git"
+  },
+  "scripts": {},
+  "version": "0.7.3"
+}

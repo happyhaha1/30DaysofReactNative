@@ -1,0 +1,13 @@
+{
+  "name": "RandomGradientColorMusic",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react-native": "^0.21.0",
+    "react-native-linear-gradient": "^1.5.2",
+    "react-native-sound": "^0.7.3"
+  }
+}
